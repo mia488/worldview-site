@@ -65,9 +65,9 @@
   /* ---------- 人设档案渲染 ---------- */
   var STATUS_MAP = {
     alive: { label: "存活", cls: "status-alive" },
-    missing: { label: "失踪", cls: "status-missing" },
-    fallen: { label: "陨落", cls: "status-fallen" },
-    anomaly: { label: "异常化", cls: "status-anomaly" }
+    missing: { label: "死亡", cls: "status-missing" },
+    fallen: { label: "异类", cls: "status-fallen" },
+    anomaly: { label: "诡异", cls: "status-anomaly" }
   };
 
   function statusInfo(s) {

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>诡序档案馆 · 群世界观</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230c0e12'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23a33024' stroke-width='4'/%3E%3Ccircle cx='32' cy='26' r='7' fill='none' stroke='%23c9c2b0' stroke-width='3'/%3E%3Ccircle cx='32' cy='26' r='2' fill='%23a33024'/%3E%3Cpath d='M26 40 Q32 46 38 40' fill='none' stroke='%23c9c2b0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= 站点配置（改这里：站点名、群名、留言板） ================= -->
+<script id="site-config">
+/* ============================================================
+ *  站点配置区 —— 改这里
+ *  ============================================================
+ *  1. 把 SITE_NAME 改成你们世界观的名字（标题、页脚都会跟着变）
+ *  2. 把 GROUP_NAME 改成你们的 QQ 群名
+ *  3. 留言板使用 Giscus（免费，基于 GitHub 讨论区）。
+ *     配置步骤见 README.md，配置好前留言板会显示引导提示。
+ * ============================================================ */
+window.SITE_CONFIG = {
+  siteName: "诡序档案馆",
+  worldName: "诡序纪元",          // 世界观正式名称
+  tagline: "规则正在失效，怪谈开始复苏。",  // 一句话简介
+  groupName: "我们的 QQ 群",      // 群名/群号
+  groupLink: "https://qm.qq.com/q/你的群链接",  // 群邀请链接（可留空）
+  giscus: {
+    enabled: true,
+    repo: "mia488/worldview-site",
+    repoId: "R_kgDOVNqp4w",
+    category: "Announcements",
+    categoryId: "DIC_kwDOVNqp484DIyCG",
+    mapping: "pathname",
+    lang: "zh-CN"
+  }
+};
+</script>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="#/home">
+      <span class="brand-seal">诡</span>
+      <span class="brand-text" id="brandName">诡序档案馆</span>
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="#/home" data-view="home" class="nav-link">世界观</a>
+      <a href="#/characters" data-view="characters" class="nav-link">人设档案</a>
+      <a href="#/guestbook" data-view="guestbook" class="nav-link">留言板</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-main">
+
+  <!-- ================= 视图：世界观主页 ================= -->
+  <section class="view" id="view-home" data-route="home">
+
+    <div class="hero">
+      <div class="hero-bg" style="background-image:url('assets/hero.jpg')"></div>
+      <div class="hero-veil"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">群·原创世界观</p>
+        <h1 class="hero-title" id="heroWorldName">诡序纪元</h1>
+        <p class="hero-tagline" id="heroTagline">规则正在失效，怪谈开始复苏。</p>
+        <div class="hero-actions">
+          <a href="#/characters" class="btn btn-primary">查阅人设档案</a>
+          <a href="#/guestbook" class="btn btn-ghost">去留言板</a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">▼</div>
+    </div>
+
+    <div class="container">
+
+      <!-- 世界背景 -->
+      <section class="section" id="world-bg">
+        <div class="section-head">
+          <span class="section-index">壹</span>
+          <h2 class="section-title">世界背景</h2>
+        </div>
+        <div class="prose">
+          <p id="bgP1">曾经，世界是"正常"的。规则可靠，因果清晰，怪谈只是茶余饭后的消遣。直到某天起，细微的"不对劲"开始出现：消失的门牌号、多出来的脚步声、永远走不到尽头的楼道……传说开始有了实体。</p>
+          <p id="bgP2">人们把这场异变称为「诡序复苏」——古老的诡异秩序正在苏醒，试图覆盖我们熟悉的现实。而在这座被裂隙撕开的世界里，有一群玩家选择走进黑暗：记录规则、观测异常、对抗侵蚀，在怪谈与现实之间，为人类守住最后的灯火。</p>
+          <p class="prose-note" id="bgNote">※ 以上为示例设定，请替换为你们群原创世界观的真实背景。</p>
+        </div>
+      </section>
+
+      <!-- 核心设定 -->
+      <section class="section" id="world-core">
+        <div class="section-head">
+          <span class="section-index">贰</span>
+          <h2 class="section-title">核心设定</h2>
+        </div>
+        <div class="card-grid" id="coreCards">
+          <!-- 由 js/app.js 根据 CONFIG 渲染 -->
+        </div>
+      </section>
+
+      <!-- 阵营与组织 -->
+      <section class="section" id="world-camps">
+        <div class="section-head">
+          <span class="section-index">叁</span>
+          <h2 class="section-title">阵营与组织</h2>
+        </div>
+        <div class="card-grid" id="campCards">
+          <!-- 由 js/app.js 渲染 -->
+        </div>
+      </section>
+
+      <!-- 玩家守则 -->
+      <section class="section" id="world-rules">
+        <div class="section-head">
+          <span class="section-index">肆</span>
+          <h2 class="section-title">玩家守则</h2>
+        </div>
+        <div class="rules-list" id="rulesList">
+          <!-- 由 js/app.js 渲染 -->
+        </div>
+      </section>
+
+      <!-- 召唤卡 -->
+      <section class="callout">
+        <h2 class="callout-title">世界正在注视你。</h2>
+        <p class="callout-sub">建立你的人设档案，成为这个纪元的一份子。</p>
+        <div class="hero-actions">
+          <a href="#/characters" class="btn btn-primary">建立档案</a>
+          <a href="#/guestbook" class="btn btn-ghost">留下留言</a>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- ================= 视图：人设档案 ================= -->
+  <section class="view" id="view-characters" data-route="characters">
+    <div class="page-hero">
+      <div class="container">
+        <p class="hero-eyebrow">Character Archive</p>
+        <h1 class="page-title">人设档案</h1>
+        <p class="page-sub">每一位玩家的角色记录。点击档案查看完整设定。</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- 筛选栏 -->
+      <div class="filter-bar" id="filterBar">
+        <div class="filter-search">
+          <input type="search" id="searchInput" placeholder="搜索角色名 / 称号 / 能力…">
+        </div>
+        <div class="filter-group" id="campFilter">
+          <span class="filter-label">阵营</span>
+          <div class="filter-chips" id="campChips"><!-- js 渲染 --></div>
+        </div>
+        <div class="filter-group" id="statusFilter">
+          <span class="filter-label">状态</span>
+          <div class="filter-chips" id="statusChips"><!-- js 渲染 --></div>
+        </div>
+      </div>
+
+      <div class="char-grid" id="charGrid"><!-- 由 js 渲染角色卡片 --></div>
+      <p class="empty-hint" id="emptyHint" hidden>没有匹配的档案。换个筛选条件试试，或在 data.js 中添加新角色。</p>
+
+    </div>
+  </section>
+
+  <!-- ================= 视图：留言板 ================= -->
+  <section class="view" id="view-guestbook" data-route="guestbook">
+    <div class="page-hero">
+      <div class="container">
+        <p class="hero-eyebrow">Guestbook</p>
+        <h1 class="page-title">留言板</h1>
+        <p class="page-sub">在世界的裂隙之间，留下你的声音。</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="guestbook-notice">
+        <span class="notice-icon">律</span>
+        <p><strong>留言须知：</strong>请友善留言；可以讨论剧情、角色与事件，禁止剧透、引战与人身攻击；留言需要登录 GitHub 账号（首次使用会提示授权）。</p>
+      </div>
+
+      <!-- 留言容器：配置 Giscus 后自动加载真实留言 -->
+      <div class="guestbook-box">
+        <div id="giscus-placeholder" class="giscus-placeholder">
+          <div class="placeholder-seal">未</div>
+          <h3>留言板尚未开启</h3>
+          <p>留言板使用 Giscus 服务（免费、无需自建服务器）。请按 README.md 中的「开启留言板」步骤配置后，即可在这里看到并发表留言。</p>
+          <ol class="placeholder-steps">
+            <li>把网站上传到 GitHub 并开启仓库的 Discussions 讨论区</li>
+            <li>安装 Giscus 应用并获取仓库 ID / 分类 ID</li>
+            <li>填入 index.html 顶部的 site-config 配置区，把 enabled 改为 true</li>
+          </ol>
+        </div>
+        <!-- Giscus 脚本由 app.js 在配置生效时动态注入 -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= 角色详情弹窗 ================= -->
+<div class="modal" id="charModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <button class="modal-close" data-close aria-label="关闭">×</button>
+    <div class="modal-body" id="modalBody"><!-- js 渲染 --></div>
+  </div>
+</div>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-brand" id="footerName">诡序档案馆</p>
+    <p class="footer-meta" id="footerGroup">群：我们的 QQ 群</p>
+    <p class="footer-line">本网站为群内创作展示，人物与事件均为虚构。</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
